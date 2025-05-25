@@ -2,10 +2,14 @@ async function menu() {
     let menu = "";
     let data = await fetch("https://negar1919.github.io/json-server/db.json");
     let res = await data.json();
-    menu = res.menu.map((elem) => {
+    menu = res.menu.map((elem,i) => {
+   
+   
+        let img = ["./imags/img2.svg","./imags/flogop.jpg","/imags/icons8-search-32.png"]
+      
       return `
         <li>
-          <img src="${elem.img}" alt="" />
+          <img src="${img[i]}" alt="" />
           <a href="${elem.href}">${elem.title}</a>
         </li>
       `;
@@ -29,10 +33,10 @@ async function menu() {
     butnbut = res.menuboton.map((elem) => {
       return `
            <div class="sub">
-              <button>
-                <img src=${elem.img} alt="" />
-
-                ${elem.title} 
+              <button id = "sub-btn">
+             <img src="./imags/aparatimg.svg" alt="">
+ <p>   ${elem.title}   </p>
+               
               </button>
             </div>
       `;

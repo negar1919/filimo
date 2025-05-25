@@ -8,7 +8,7 @@ display: flex;
 
 p{
     width: 100%;
-    margin-top: 17px;
+
 font-family: iran;
 font-size: 1.1rem;
 line-height: 24px;
@@ -25,18 +25,19 @@ span{
     font-size: 12px;
     color: #9e9e9e;
 font-family: iran;
+margin-bottom: 20px;
 
 }
 
 }
 .accordion-question {
-    width: 79%;
+    width: 59%;
     position: relative;
     color: white;
     cursor: pointer;
     padding: 22px 12px 22px 30px;
     border: 1px solid #333;
-    transition: color 0.3s;
+  margin-bottom: 8px;
     font-size: 12px;
     font-weight: bold;
     background-color: #161616;
@@ -45,8 +46,8 @@ font-family: iran;
      color: #fff;
      cursor: pointer;
      border-radius: 6px;
-     margin-top: 22px;
-     margin-right: 23px;
+
+     margin-right: 303px;
  
   }
   
@@ -57,44 +58,60 @@ font-family: iran;
     color: gold;
 
     font-size: 20px;
-    transition: all 0.3s ease;
+  
   }
   
   .accordion-question.active {
     color: #DA773A;
     
   }
+
   
   .accordion-question.active::before {
     content: "×";
     color: gold;
   }
   
+
   .accordion-answer {
-    width: 82%;
-    font-family: iran;
+    box-sizing: border-box;
+    width: 62%;
     line-height: 24px;
     cursor: pointer;
     border-radius: 6px;
-    display: none;
+     height: 0; 
     color: #ccc;
-    padding: 22px 15px;
     background-color: #222;
-    font-size: 12px;
-    line-height: 1.6;
-    margin-right: 23px;
-    border-bottom: 1px solid #333;
-    font-family: iran;
-    max-height: 0;
+    margin-right: 303px;
+    transition: 300ms ease;
     overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.6s ease 0.3s, opacity 0.6s ease 0.3s;
     
   }
+.accordion-answer article{
+font-family: iran;
+font-size: 12px;
+ padding: 8px 25px;
+}
+
+
+
+
+
   
   .accordion-question.active + .accordion-answer {
-    max-height: 200px; 
-    opacity: 1;
-    padding: 10px 15px;
-    transition: max-height 0.6s ease 0.3s, opacity 0.6s ease 0.3s;
+height: 80px;
+
+
+
+  }
+  .accordion-question:nth-child(3).active + .accordion-answer {
+height: 60px;
+
+ 
+
+  }
+  .accordion-question:first-child.active + .accordion-answer {
+height: 95px;
+
+
   }

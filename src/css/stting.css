@@ -18,6 +18,14 @@ body{
 }
 
 
+.menufooter{
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
   transform: rotate(0deg) !important; 
@@ -29,13 +37,43 @@ body{
 @media  only screen and (max-width:760px) {
 .comment-next{
  right: 95% !important;
+ 
 }  
+
+
+.footer-menu > li:last-child  {
+position: absolute;
+left: 10px;
+
+}
+
 }
 @media only screen and (max-width:361px){
+   .footer-menu > li:last-child  {
+position: static;
+left: 0;
 
+}
+
+
+ /* .buttns1{
+  height: 300px;
+ } */
+ 
+  .tasvir img {
+    height: 200px !important;
+  width: 200px;
+  }
 .swiper-button-next  {
   transform: rotate(0deg) !important;
   right: 85% !important;
+}
+}
+@media only screen and (max-width:546px){
+   .footer-menu > li:last-child  {
+position: static;
+left: 0;
+
 }
 }
 
@@ -68,6 +106,7 @@ body{
     margin: 15px 0;
     font-weight: 500;
     font-size: 11px;
+    cursor: pointer;
 
   }
 
@@ -86,4 +125,45 @@ body{
     position: relative;
     right: 75px;
     
+  }
+
+  
+#sub-btn {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 116px;
+height: 40px;
+padding: 0;
+  }
+
+#sub-btn img {
+    width: 34px !important;
+    height: 34px;
+    display: inline-block;
+   
+  }
+  #sub-btn p {
+    display: inline-block;
+     position: relative;
+    left: 7px;
+  
+  }
+
+  .right ul li:last-child img{
+
+  fill: green;  
+  }
+ 
+  #filmidselect{
+    height:400px ;
+    overflow: hidden;
+  }
+  #filmidselect p{
+   font-size: 12px;
+   font-weight: 100;
+  }
+  
+  #accordion-container{
+    color: wheat !important;
   }

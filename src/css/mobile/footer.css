@@ -11,11 +11,14 @@ li{
     font-family: iran;
 }
 
+
+
 .footer-menu{
     display: flex;
     align-items: center;
     justify-content: start;
     height: 50px;
+    font-size: 8px;
 }
 .footer-menu li{
 height: 100%;
@@ -23,10 +26,10 @@ display: flex;
 align-items: center;
 }
 .footer-menu li a {
-    font-size: 13px;
+    font-size: 10px;
 
     font-weight: 200;
-    margin: 10px 20px;
+    margin: 10px 6px;
    color: #959595;
  text-transform: capitalize;
     text-decoration: none;
@@ -69,6 +72,13 @@ height: 64px;
     left: 5px;
   font-size: 13px;
 }
+
+.footer-menu > li:last-child  {
+position: absolute;
+left: 10px;
+
+}
+
 
 
 

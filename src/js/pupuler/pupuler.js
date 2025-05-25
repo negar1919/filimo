@@ -59,20 +59,26 @@ container.insertAdjacentHTML("afterbegin", tasvir.join(""));
     const buttons = document.querySelectorAll(".docme button");
      buttons.forEach((b) => b.classList.remove("active"));
         buttons[0].classList.add("active")
+      
  
     buttons.forEach((btn) => {
       btn.addEventListener("click", async () => {
-      // alert(btn.getAttribute("data-target")) 
-
+     
           if (btn.getAttribute("data-target") == "filims") {
+            //  document.querySelector(".info").id = "filmidselect"
             btn.classList.add("active")
             buttons[0].classList.remove("active")
+           
           }else{
+            //  document.querySelector(".info").id = ""
              btn.classList.add("active")
             buttons[1].classList.remove("active")
+           
+              
+
           }
         const type = btn.dataset.target;
-// "http://localhost:3000/tasvir"
+
           
         const data = await fetch("https://negar1919.github.io/json-server/db.json")
         const res = await data.json();
@@ -130,10 +136,10 @@ container.insertAdjacentHTML("afterbegin", hp.join(""));
   async function stori() {
     let stori = "";
     let data = await fetch("https://negar1919.github.io/json-server/db.json");
-    let res = await data.json();
-    stori = res.logofilim.map((elem) => {
+    let res = await data.json();      
+     stori = res["stori"].map((elem) => { 
       return `
-                           ${elem.title}
+               ${elem.title}
       `;
     });
   let container = document.querySelector(".stori");
@@ -459,7 +465,7 @@ container.insertAdjacentHTML("afterbegin", part8.join(""));
     let data = await fetch("https://negar1919.github.io/json-server/db.json");
     let res = await data.json();
     v9 = res.v9.map((elem) => {
-      console.log(`  <img src="${elem.src}" alt=""></img>`);
+    
       
       return `
         <img src="${elem.src}" alt="">

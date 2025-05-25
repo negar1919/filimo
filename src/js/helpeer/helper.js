@@ -6,6 +6,7 @@
        let parafilm = document.querySelector(".parafilm")
        let tasvirimg = document.getElementsByClassName("tasvirimg")
 
+let mtnfilm = document.querySelector(".mtnfilm")
 
       function helper(e){
             
@@ -37,6 +38,7 @@
                    e.style.scale = 1
                  }
 
+
    if (filter[0].itsFilm) {
                   filmelment.innerHTML = `
                     <div class="filmelment">        
@@ -58,10 +60,17 @@
 
 
                 if (!filter[0].itsFilm) {
-                    document.querySelector(".logofilim").innerHTML= `<img src="${filter[0].logofilim}" alt="">`
+                    
+                    document.querySelector(".info").id = ""
+                   document.querySelector(".slaider1").style.display = "block"
+                  document.querySelector(".logofilim").innerHTML= `<img src="${filter[0].logofilim}" alt="">`
                 }
+               
                 else{
-                   document.querySelector(".logofilim").innerHTML= ""
+                   document.querySelector(".info").id = "filmidselect"
+                     document.querySelector(".slaider1").style.display = "none"
+                   
+                  document.querySelector(".logofilim").innerHTML= ""
                 }
             
                 fort.innerHTML=`
